@@ -94,6 +94,7 @@ vscode
 gtksourceview 
 yt-dlp 
 sysstat
+mate-backgrounds
 feh
 variety
 plank
