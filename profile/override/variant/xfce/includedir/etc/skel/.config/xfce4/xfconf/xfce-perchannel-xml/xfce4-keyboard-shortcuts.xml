@@ -40,7 +40,7 @@
 		</property>
 		<property name="custom" type="empty">
 			<property name="override" type="bool" value="true"/>
-			<property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-applicationsmenu"/>
+			<property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-whiskermenu"/>
 			<property name="&lt;Alt&gt;F2" type="string" value="xfce4-appfinder">
 				<property name="startup-notify" type="bool" value="true"/>
 			</property>

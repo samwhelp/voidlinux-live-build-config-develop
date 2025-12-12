@@ -37,8 +37,14 @@
 		</property>
 	</property>
 	<property name="plugins" type="empty">
-		<property name="plugin-1" type="string" value="applicationsmenu">
-			<property name="show-button-title" type="bool" value="false"/>
+		<property name="plugin-1" type="string" value="whiskermenu">
+			<property name="button-icon" type="string" value="xfce4-panel-menu"/>
+			<property name="button-title" type="string" value="Applications"/>
+			<property name="custom-menu" type="bool" value="false"/>
+			<property name="show-button-title" type="bool" value="true"/>
+			<property name="show-generic-names" type="bool" value="false"/>
+			<property name="show-menu-icons" type="bool" value="true"/>
+			<property name="show-tooltips" type="bool" value="false"/>
 		</property>
 		<property name="plugin-2" type="string" value="tasklist">
 			<property name="flat-buttons" type="bool" value="true"/>
