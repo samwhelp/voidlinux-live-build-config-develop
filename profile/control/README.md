@@ -36,7 +36,12 @@ or run
 
 ### Only Build Template
 
-run
+> There are two main steps
+
+* generate build-template
+* cd build-template and build iso
+
+run to only generate build-template
 
 ``` sh
 sudo env ONLY_BUILD_TEMPLATE=true ./steps.sh
