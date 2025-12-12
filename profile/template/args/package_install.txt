@@ -94,6 +94,9 @@ vscode
 gtksourceview 
 yt-dlp 
 sysstat
+feh
+variety
+plank
 numix-themes
 arc-theme
 papirus-icon-theme
