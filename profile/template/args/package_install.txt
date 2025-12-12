@@ -94,3 +94,8 @@ vscode
 gtksourceview 
 yt-dlp 
 sysstat
+numix-themes
+arc-theme
+papirus-icon-theme
+papirus-folders
+
