@@ -104,4 +104,7 @@ papirus-icon-theme
 papirus-folders
 breeze-gtk
 breeze-icons
-
+noto-fonts-cjk
+dejavu-fonts-ttf
+liberation-fonts-ttf
+ttf-ubuntu-font-family
