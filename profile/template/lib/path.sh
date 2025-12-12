@@ -7,6 +7,7 @@ suit_dir_path="$(realpath "${plan_dir_path}/../..")"
 ## path
 void_mklive_dir_path="${plan_dir_path}/void-mklive"
 build_root_dir_path="${suit_dir_path}/build"
+cache_root_dir_path="${suit_dir_path}/cache"
 dist_root_dir_path="${suit_dir_path}/dist"
 profile_root_dir_path="${suit_dir_path}/profile"
 template_root_dir_path="${profile_root_dir_path}/template"

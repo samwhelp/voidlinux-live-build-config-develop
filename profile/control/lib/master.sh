@@ -147,6 +147,19 @@ build_iso_profile_append_by_locale_package () {
 
 master_iso_build_main () {
 
+	if [ "${ONLY_BUILD_TEMPLATE}" = "true" ]; then
+		echo
+		echo "##"
+		echo "## ## Only Build Template"
+		echo "##"
+		echo
+		echo "## > Please check dir:"
+		echo
+		echo "cd ${build_root_dir_path}"
+		echo
+		exit 0
+	fi
+
 	master_iso_build_delgate
 
 }

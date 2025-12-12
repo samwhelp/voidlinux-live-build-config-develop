@@ -19,28 +19,62 @@ mod_iso_build_via_void_mklive () {
 	## core start
 	info_msg "## Building via void-mklive"
 
+
+	## prepare cache dir
+	local cache_dir_path="${cache_root_dir_path}/xbps-cachedir-${opt_arch}"
+	mkdir -p "${cache_dir_path}"
+
+
 	## change working directory
 	info_msg "Change working directory to 'void-mklive'"
 	cd "${void_mklive_dir_path}"
 
 
-	# Run void linux script to build iso file image
-	info_msg "## Now I run 'mkiso.sh' with the flags prepared before"
-	sudo ./mkiso.sh \
-		-a ${opt_arch} \
-		-b ${opt_variant} \
-		-- \
-		-k ${opt_keymap} \
-		-l ${opt_locale} \
-		-e ${opt_root_shell} \
-		-v ${opt_linux_version} \
-		-x "${opt_postscript}" \
-		-I "${opt_includedir}" \
-		-o "${opt_iso_file_name}" \
-		-T "${opt_title}" \
-		-p "${opt_package_install}" \
-		-S "${opt_service}" \
-		-C "${opt_kernel_args}"
+	if [ "${IS_SIMULATION_GENERATION}" = "true" ]; then
+
+		# Simulate Run void linux script to build iso file image
+		info_msg "## Simulate run 'mkiso.sh' with the flags"
+		echo sudo ./mkiso.sh \
+			-a ${opt_arch} \
+			-b ${opt_variant} \
+			-- \
+			-k ${opt_keymap} \
+			-l ${opt_locale} \
+			-e ${opt_root_shell} \
+			-v ${opt_linux_version} \
+			-r "${opt_repo}" \
+			-x "${opt_postscript}" \
+			-I "${opt_includedir}" \
+			-c "${cache_dir_path}" \
+			-o "${opt_iso_file_name}" \
+			-T "${opt_title}" \
+			-p "${opt_package_install}" \
+			-S "${opt_service}" \
+			-C "${opt_kernel_args}"
+
+	else
+
+		# Run void linux script to build iso file image
+		info_msg "## Now run 'mkiso.sh' with the flags"
+		sudo ./mkiso.sh \
+			-a ${opt_arch} \
+			-b ${opt_variant} \
+			-- \
+			-k ${opt_keymap} \
+			-l ${opt_locale} \
+			-e ${opt_root_shell} \
+			-v ${opt_linux_version} \
+			-r "${opt_repo}" \
+			-x "${opt_postscript}" \
+			-I "${opt_includedir}" \
+			-c "${cache_dir_path}" \
+			-o "${opt_iso_file_name}" \
+			-T "${opt_title}" \
+			-p "${opt_package_install}" \
+			-S "${opt_service}" \
+			-C "${opt_kernel_args}"
+
+	fi
 
 
 	mod_iso_build_move_iso_file_to_dist_folder "${opt_iso_file_name}"
