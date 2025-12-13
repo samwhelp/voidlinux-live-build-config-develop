@@ -19,10 +19,14 @@ mod_iso_build_via_void_mklive () {
 	## core start
 	info_msg "## Building via void-mklive"
 
+	local host_arch=$(xbps-uhelper arch)
 
 	## prepare cache dir
-	local cache_dir_path="${cache_root_dir_path}/xbps-cachedir-${opt_arch}"
-	mkdir -p "${cache_dir_path}"
+	local xbps_cache_dir_path="${cache_root_dir_path}/xbps-cachedir-${opt_arch}"
+	mkdir -p "${xbps_cache_dir_path}"
+
+	local host_xbps_cache_dir_path="${cache_root_dir_path}/xbps-cachedir-${host_arch}"
+	mkdir -p "${host_xbps_cache_dir_path}"
 
 
 	## change working directory
@@ -45,7 +49,8 @@ mod_iso_build_via_void_mklive () {
 			-r "${opt_repo}" \
 			-x "${opt_postscript}" \
 			-I "${opt_includedir}" \
-			-c "${cache_dir_path}" \
+			-c "${xbps_cache_dir_path}" \
+			-H "${host_xbps_cache_dir_path}" \
 			-o "${opt_iso_file_name}" \
 			-T "${opt_title}" \
 			-p "${opt_package_install}" \
@@ -67,7 +72,8 @@ mod_iso_build_via_void_mklive () {
 			-r "${opt_repo}" \
 			-x "${opt_postscript}" \
 			-I "${opt_includedir}" \
-			-c "${cache_dir_path}" \
+			-c "${xbps_cache_dir_path}" \
+			-H "${host_xbps_cache_dir_path}" \
 			-o "${opt_iso_file_name}" \
 			-T "${opt_title}" \
 			-p "${opt_package_install}" \
