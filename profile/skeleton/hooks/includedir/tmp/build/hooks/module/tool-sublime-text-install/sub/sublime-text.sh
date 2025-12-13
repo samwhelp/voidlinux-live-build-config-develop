@@ -14,7 +14,7 @@ sub_sublime_text_install () {
 
 
 	## install void-repo-nonfree
-	xbps-install -Su void-repo-nonfree
+	xbps-install -Su -y void-repo-nonfree
 
 
 	## update repo data
@@ -22,7 +22,7 @@ sub_sublime_text_install () {
 
 
 	## install sublime-text4
-	xbps-install -Su sublime-text4
+	xbps-install -Su -y sublime-text4
 
 
 	## add /usr/bin/subl symbolic link to /usr/bin/subl4
