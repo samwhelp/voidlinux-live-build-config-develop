@@ -54,7 +54,7 @@ mod_iso_build_via_void_mklive () {
 			-o "${opt_iso_file_name}" \
 			-T "${opt_title}" \
 			-p "${opt_package_install}" \
-			-S "${opt_service}" \
+			-S "${opt_service_start}" \
 			-C "${opt_kernel_args}"
 
 	else
@@ -77,7 +77,7 @@ mod_iso_build_via_void_mklive () {
 			-o "${opt_iso_file_name}" \
 			-T "${opt_title}" \
 			-p "${opt_package_install}" \
-			-S "${opt_service}" \
+			-S "${opt_service_start}" \
 			-C "${opt_kernel_args}"
 
 	fi

@@ -36,7 +36,7 @@ opt_linux_version=$(cat "${plan_dir_path}/args/linux_version.txt")
 opt_kernel_args=$(cat "${plan_dir_path}/args/kernel_args.txt")
 opt_repo=$(cat "${plan_dir_path}/args/repo.txt")
 opt_package_install=$(cat "${plan_dir_path}/args/package_install.txt")
-opt_service=$(cat "${plan_dir_path}/args/services.txt")
+opt_service_start=$(cat "${plan_dir_path}/args/service_start.txt")
 opt_iso_file_name="${opt_name}_${opt_variant}_${opt_locale}_${opt_arch}_${timestamp_start}.iso"
 
 
@@ -61,7 +61,7 @@ if [ "${IS_DEBUG}" = "true" ]; then
 	echo "opt_kernel_args=${opt_kernel_args}"
 	echo "opt_repo=${opt_repo}"
 	echo opt_package_install=${opt_package_install}
-	echo opt_service=${opt_service}
+	echo opt_service_start=${opt_service_start}
 	echo
 
 fi
