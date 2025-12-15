@@ -142,7 +142,7 @@ build_iso_profile_append_by_variant_package () {
 	local des_file_path="${des_dir_path}/args/package_install.txt"
 
 
-	cat "${src_file_path}" | tee -a "${des_file_path}" >/dev/null 2>&1
+	util_file_append "${src_file_path}" "${des_file_path}"
 
 
 	return 0
@@ -166,7 +166,7 @@ build_iso_profile_append_by_locale_package () {
 	local des_file_path="${des_dir_path}/args/package_install.txt"
 
 
-	cat "${src_file_path}" | tee -a "${des_file_path}" >/dev/null 2>&1
+	util_file_append "${src_file_path}" "${des_file_path}"
 
 
 	return 0
