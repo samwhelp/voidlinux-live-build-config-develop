@@ -3,7 +3,7 @@
 [org.gnome.desktop.interface]
 color-scheme='prefer-dark'
 gtk-theme='Adwaita-dark'
-icon-theme='Adwaita'
+icon-theme='Papirus-Dark'
 cursor-theme='Adwaita'
 cursor-size=24
 
