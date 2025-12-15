@@ -127,12 +127,12 @@ build_iso_profile_override_by_control () {
 build_iso_profile_append_by_variant () {
 
 
-	build_iso_profile_append_by_variant_package
+	build_iso_profile_append_by_variant_package_install
 
 	return 0
 }
 
-build_iso_profile_append_by_variant_package () {
+build_iso_profile_append_by_variant_package_install () {
 
 	local src_dir_path="${append_root_dir_path}/variant/${opt_variant}"
 	local des_dir_path="${build_root_dir_path}/template"
@@ -151,12 +151,12 @@ build_iso_profile_append_by_variant_package () {
 build_iso_profile_append_by_locale () {
 
 
-	build_iso_profile_append_by_locale_package
+	build_iso_profile_append_by_locale_package_install
 
 	return 0
 }
 
-build_iso_profile_append_by_locale_package () {
+build_iso_profile_append_by_locale_package_install () {
 
 	local src_dir_path="${append_root_dir_path}/locale/${opt_locale}"
 	local des_dir_path="${build_root_dir_path}/template"
