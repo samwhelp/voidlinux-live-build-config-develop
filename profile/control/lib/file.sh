@@ -24,7 +24,7 @@ util_file_copy () {
 
 	if ! [ -e "${src_file_path}" ]; then
 		echo
-		echo "File Not Exists: ${src_file_path}"
+		echo "## ## File Not Exists: ${src_file_path}"
 		echo
 		return 0
 	fi
@@ -46,7 +46,7 @@ util_file_append () {
 
 	if ! [ -e "${src_file_path}" ]; then
 		echo
-		echo "File Not Exists: ${src_file_path}"
+		echo "## ## File Not Exists: ${src_file_path}"
 		echo
 		return 0
 	fi
