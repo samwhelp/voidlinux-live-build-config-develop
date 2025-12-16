@@ -1,0 +1,8 @@
+dolphin
+kwrite
+kate
+konsole
+yakuake
+gwenview
+spectacle
+discover
