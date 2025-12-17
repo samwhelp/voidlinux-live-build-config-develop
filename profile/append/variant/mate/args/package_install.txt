@@ -1,0 +1,6 @@
+compiz-reloaded
+ccsm
+compiz-core
+compiz-plugins-main
+compiz-plugins-extra
+compiz-plugins-experimental
