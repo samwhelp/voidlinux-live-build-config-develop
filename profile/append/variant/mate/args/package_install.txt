@@ -1,3 +1,4 @@
+brisk-menu
 mate-tweak
 compiz-reloaded
 ccsm
