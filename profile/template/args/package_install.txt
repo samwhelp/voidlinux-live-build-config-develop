@@ -114,6 +114,7 @@ Thunar
 xfce4-terminal
 pcmanfm
 sakura
+mousepad
 geany
 viewnior
 smplayer
