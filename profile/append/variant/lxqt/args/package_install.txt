@@ -1,2 +1,3 @@
+network-manager-applet
 picom
 xfce4-screenshooter
