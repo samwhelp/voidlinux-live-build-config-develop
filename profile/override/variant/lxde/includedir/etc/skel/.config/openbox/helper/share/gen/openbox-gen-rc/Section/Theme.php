@@ -1,6 +1,6 @@
 
 <theme>
-	<name>Onyx</name>
+	<name>Numix</name>
 	<titleLayout>NLIMC</titleLayout>
 	<!--
 		available characters are NDSLIMC, each can occur at most once.
