@@ -7,4 +7,3 @@ socklog-unix
 nanoklogd
 spice-vdagentd
 
-
