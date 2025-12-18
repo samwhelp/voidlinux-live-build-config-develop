@@ -103,7 +103,7 @@ Plugin {
   type=volume
   Config {
     MixerCommand=pavucontrol
-    MixerCommandTerm=1
+    MixerCommandTerm=0
   }
 }
 Plugin {
