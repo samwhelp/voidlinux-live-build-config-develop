@@ -1,3 +1,4 @@
 network-manager-applet
+pavucontrol-qt
 picom
 xfce4-screenshooter
