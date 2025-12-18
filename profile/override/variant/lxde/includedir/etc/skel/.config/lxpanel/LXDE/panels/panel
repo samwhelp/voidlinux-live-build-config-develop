@@ -100,6 +100,13 @@ Plugin {
   }
 }
 Plugin {
+  type=volume
+  Config {
+    MixerCommand=pavucontrol
+    MixerCommandTerm=1
+  }
+}
+Plugin {
   type=tray
   Config {
   }
