@@ -1,9 +1,27 @@
 
-check_root_user_required () {
+core_args_load () {
 
-	if [ "$(id -u)" -ne 0 ]; then
-		echo "Must be run as root, exiting..."
-		exit 1
-	fi
+	##
+	## trim newline version
+	##
+
+	local the_args_file="${1}"
+	local the_args=$(cat "${the_args_file}")
+
+	echo ${the_args}
+
+}
+
+
+core_list_load () {
+
+	##
+	## not trim newline version
+	##
+
+	local the_list_file="${1}"
+	local the_list="$(cat "${the_list_file}")"
+
+	echo "${the_list}"
 
 }

@@ -16,8 +16,11 @@ ONLY_BUILD_TEMPLATE="${ONLY_BUILD_TEMPLATE:=$DEFAULT_ONLY_BUILD_TEMPLATE}"
 . "${plan_dir_path}/lib/path.sh"
 
 
-## lib
+## base
 . "${plan_dir_path}/lib/base.sh"
+
+
+## model
 . "${plan_dir_path}/lib/file.sh"
 . "${plan_dir_path}/lib/master.sh"
 
