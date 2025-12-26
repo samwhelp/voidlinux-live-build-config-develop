@@ -8,12 +8,16 @@ DEFAULT_ONLY_BUILD_TEMPLATE=false
 ONLY_BUILD_TEMPLATE="${ONLY_BUILD_TEMPLATE:=$DEFAULT_ONLY_BUILD_TEMPLATE}"
 
 
+## core
+. "${plan_dir_path}/lib/core.sh"
+
+
 ## path
 . "${plan_dir_path}/lib/path.sh"
 
 
 ## lib
-. "${plan_dir_path}/lib/core.sh"
+. "${plan_dir_path}/lib/base.sh"
 . "${plan_dir_path}/lib/file.sh"
 . "${plan_dir_path}/lib/master.sh"
 
